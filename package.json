@@ -8,7 +8,7 @@
     "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "format": "lint-staged --allow-empty"
+    "lint-staged": "lint-staged --allow-empty"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,10 @@
     "url": "https://github.com/turner-kl/learn-jest/issues"
   },
   "homepage": "https://github.com/turner-kl/learn-jest#readme",
+  "lint-staged": { "*.{ts,tsx}": [
+    "eslint",
+    "prettier --write" ]
+  },
   "devDependencies": {
     "@babel/core": "7.20.12",
     "@storybook/addon-actions": "6.5.16",
